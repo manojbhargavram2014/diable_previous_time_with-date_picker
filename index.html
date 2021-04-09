@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The select element</h1>
+
+<p>Disable prvious time using drop down.</p>
+<?php
+date_default_timezone_set("Arctic/Longyearbyen");
+echo date("h");
+?>
+<form action="#">
+  <label for="time">Choose a time:</label>
+  <select name="cars" id="cars">
+    <option value="1" <?php if(date("h")>"7") {echo 'disabled="disabled"';} ?>>07</option>
+    <option value="1" <?php if(date("h")>"8") {echo 'disabled="disabled"';} ?>>08</option>
+    <option value="1" <?php if(date("h")>"9") {echo 'disabled="disabled"';} ?>>09</option>
+    
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
